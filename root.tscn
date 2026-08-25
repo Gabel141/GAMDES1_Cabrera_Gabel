@@ -1,31 +1,17 @@
 [gd_scene format=3 uid="uid://b3p332pqnow23"]
 
 [ext_resource type="Script" uid="uid://bxfbvk584xgh8" path="res://root.gd" id="1_pyidc"]
-[ext_resource type="Script" uid="uid://bkedx1mkbgx5e" path="res://spintext.gd" id="2_pyidc"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_26k7k"]
-font_color = Color(2.5990605e-06, 0.55449706, 0.6403526, 1)
 
 [node name="Root" type="Node2D" unique_id=225597469]
 script = ExtResource("1_pyidc")
 
-[node name="Label" type="Label" parent="." unique_id=2025202851]
-offset_right = 355.0
-offset_bottom = 23.0
-text = "Hello, Godot, its me Barney! From Black Mesa!"
-label_settings = SubResource("LabelSettings_26k7k")
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Player" type="Sprite2D" parent="." unique_id=1380752324]
 
-[node name="Node2D" type="Node2D" parent="." unique_id=1648228286]
-position = Vector2(1131, 627)
-script = ExtResource("2_pyidc")
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1979598067]
 
-[node name="Label" type="Label" parent="Node2D" unique_id=1327707403]
-offset_left = -8.0
-offset_top = -13.0
-offset_right = 8.0
-offset_bottom = 10.0
-text = "W"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="ScoreLabel" type="Label" parent="." unique_id=1012649916]
+offset_left = -22.0
+offset_top = -309.0
+offset_right = 26.0
+offset_bottom = -286.0
+text = "Score:"
